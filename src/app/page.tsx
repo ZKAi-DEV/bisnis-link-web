@@ -45,7 +45,7 @@ export default function Home() {
           <span className="text-xs bg-green-500 text-white px-2 py-1 rounded">Chat</span>
         </a>
         <a
-          href="https://zkaistudio.com"
+          href="https://zkai-agency-io.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-between bg-blue-200 hover:bg-blue-300 transition rounded-xl p-4 shadow group"

@@ -14,14 +14,17 @@ export default function LoginPage() {
   const handleGoogleLogin = async () => {
     setLoading(true);
     setError("");
+    const redirectTo = process.env.NEXT_PUBLIC_SITE_URL
+      ? `${process.env.NEXT_PUBLIC_SITE_URL}/dashboard`
+      : "http://localhost:3000/dashboard";
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo: "http://localhost:3000/dashboard" }
+      options: { redirectTo }
     });
     if (error) setError(error.message);
     setLoading(false);
   };
-
+  
   // Login with email/password
   const handleEmailLogin = async (e: React.FormEvent) => {
     e.preventDefault();

@@ -27,7 +27,7 @@ export default function LoginPage() {
     if (error) setError(error.message);
     setLoading(false);
   };
-  
+
   // Login with email/password
   const handleEmailLogin = async (e: React.FormEvent) => {
     e.preventDefault();
